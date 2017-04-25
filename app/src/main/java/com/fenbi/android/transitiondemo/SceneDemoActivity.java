@@ -1,7 +1,7 @@
 package com.fenbi.android.transitiondemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.transition.ChangeBounds;
 import android.transition.Scene;
 import android.transition.TransitionManager;
@@ -23,6 +23,7 @@ public class SceneDemoActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        getSupportActionBar().setTitle("Scene Demo");
         findViewById(R.id.change_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

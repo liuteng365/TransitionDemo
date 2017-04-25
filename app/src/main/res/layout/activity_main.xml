@@ -16,4 +16,10 @@
         android:layout_height="wrap_content"
         android:text="TRANSITION DEMO" />
 
+    <Button
+        android:id="@+id/content_transition_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONTENT TRANSITION DEMO" />
+
 </LinearLayout>

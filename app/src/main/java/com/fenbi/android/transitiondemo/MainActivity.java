@@ -1,9 +1,12 @@
 package com.fenbi.android.transitiondemo;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Fade;
 import android.view.View;
 
 /**
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        getSupportActionBar().setTitle("Demo List");
         findViewById(R.id.scene_demo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,5 +35,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, TransitionDemoActivity.class));
             }
         });
+        findViewById(R.id.content_transition_demo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getWindow().setExitTransition(new Fade());
+                ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity());
+                startActivity(new Intent(MainActivity.this, TransitionDemoActivity.class), optionsCompat.toBundle());
+            }
+        });
+    }
+
+    private Activity getActivity() {
+        return MainActivity.this;
     }
 }
