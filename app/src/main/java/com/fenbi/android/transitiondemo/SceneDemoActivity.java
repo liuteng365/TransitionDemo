@@ -8,6 +8,9 @@ import android.transition.TransitionManager;
 import android.view.View;
 import android.view.ViewGroup;
 
+/**
+ * 为两种状态各自定义了一个布局文件，通过transition实现两种状态的切换动画
+ */
 public class SceneDemoActivity extends AppCompatActivity {
 
     private Scene scene1;
@@ -40,7 +43,7 @@ public class SceneDemoActivity extends AppCompatActivity {
     }
 
     /**
-     * scene1和scene2相互切换，播放动画 * @param view
+     * scene1和scene2相互切换，播放动画
      */
     public void change() {
         TransitionManager.go(isScene2 ? scene1 : scene2, new ChangeBounds());

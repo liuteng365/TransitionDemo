@@ -43,6 +43,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, TransitionDemoActivity.class), optionsCompat.toBundle());
             }
         });
+        findViewById(R.id.shared_element_transition_demo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getWindow().setSharedElementExitTransition(new Fade());
+                ActivityOptionsCompat optionsCompat = ActivityOptionsCompat
+                        .makeSceneTransitionAnimation(getActivity(), findViewById(R.id.yuansouti), "yuansouti_icon");
+                startActivity(new Intent(MainActivity.this, TransitionDemoActivity.class), optionsCompat.toBundle());
+            }
+        });
+        findViewById(R.id.animator_demo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AnimatorDemoActivity.class));
+            }
+        });
     }
 
     private Activity getActivity() {

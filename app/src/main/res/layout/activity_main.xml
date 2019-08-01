@@ -5,6 +5,12 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/animator_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ANIMATOR_DEMO" />
+
+    <Button
         android:id="@+id/scene_demo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,5 +27,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CONTENT TRANSITION DEMO" />
+
+    <Button
+        android:id="@+id/shared_element_transition_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SHARED ELEMENT TRANSITION DEMO" />
+
+    <ImageView
+        android:id="@+id/yuansouti"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/yuansouti" />
 
 </LinearLayout>

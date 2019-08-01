@@ -15,8 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SceneDemoActivity"/>
-        <activity android:name=".TransitionDemoActivity"/>
+        <activity android:name=".SceneDemoActivity" />
+        <activity android:name=".TransitionDemoActivity" />
+        <activity android:name=".AnimatorDemoActivity"></activity>
     </application>
 
 </manifest>
